@@ -4,5 +4,11 @@ block content
   h1= title
       
   p My name is Harshavardhan Kurra
-  button(type='button', class='btn btn-secondary') Press Me 
-
+  button(type='button', class='btn btn-secondary' onclick='update()') Press Me 
+  div(id='target' onClink='update()') Display
+  script.
+    var client_count = 0;
+    function update() { 
+       client_count++
+       document.getElementById("target").innerHTML = `Value now ${client_count}`
+     };
